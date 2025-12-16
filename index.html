@@ -3,34 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love & Protect Cats | Save Little Lives</title>
+    <title>Civility & Justice | Our Choice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Poppins', 'Arial', sans-serif;
-            line-height: 1.7;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
             color: #333;
-            background-color: #fffaf0;
-            overflow-x: hidden;
+            background: #fafafa;
         }
-        a { text-decoration: none; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-        /* Header & Navigation */
+        /* Header */
         header {
-            background: rgba(255, 105, 180, 0.95);
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1505455184862-5548843f2951?w=2000') center/cover no-repeat;
+            height: 100vh;
             color: white;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
         }
-        .container {
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .hero-content h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .btn {
+            background: #c41e3a;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn:hover { background: #a1162e; transform: translateY(-3px); }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            padding: 1.2rem 0;
+        }
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
@@ -38,269 +70,223 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        nav ul {
-            display: flex;
-            gap: 2rem;
-        }
-        nav a {
+        .logo { font-size: 1.8rem; font-weight: bold; color: white; }
+        .nav-links { display: flex; gap: 2.5rem; }
+        .nav-links a {
             color: white;
             font-weight: 500;
             transition: color 0.3s;
         }
-        nav a:hover { color: #fff59d; }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-                        url('https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?q=80&w=2000') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .hero-content h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInDown 1s;
-        }
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s 0.5s backwards;
-        }
-        .btn {
-            background: #ff69b4;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        .btn:hover {
-            background: #ff1493;
-            transform: scale(1.1);
-        }
+        .nav-links a:hover { color: #c41e3a; }
 
         /* Sections */
-        section {
-            padding: 80px 0;
+        section { padding: 100px 0; }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
         h2 {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 3rem;
-            color: #ff69b4;
+            color: #1a1a1a;
         }
-        .about, .tips, .gallery {
+
+        /* Mission */
+        .mission {
             background: white;
+            text-align: center;
         }
-        .about p {
+        .mission p {
+            font-size: 1.25rem;
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
-            font-size: 1.2rem;
             color: #555;
         }
 
-        /* Tips Grid */
-        .tips-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        /* Values Grid */
+        .values {
+            background: #f8f9fa;
         }
-        .tip-card {
-            background: #fff0f8;
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(255,105,180,0.1);
-            transition: transform 0.3s;
-        }
-        .tip-card:hover {
-            transform: translateY(-10px);
-        }
-        .tip-card i {
-            font-size: 3rem;
-            color: #ff69b4;
-            margin-bottom: 1rem;
-        }
-
-        /* Gallery */
-        .gallery-grid {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            gap: 2.5rem;
         }
-        .gallery-item {
-            overflow: hidden;
+        .card {
+            background: white;
+            padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
         }
-        .gallery-item img {
+        .card:hover { transform: translateY(-10px); }
+        .card i {
+            font-size: 3.5rem;
+            color: #c41e3a;
+            margin-bottom: 1.5rem;
+        }
+        .card h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+
+        /* Gallery / Images */
+        .images {
+            background: white;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .img-item {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .img-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.6s;
         }
-        .gallery-item:hover img {
-            transform: scale(1.15);
-        }
+        .img-item:hover img { transform: scale(1.1); }
 
         /* Footer */
         footer {
-            background: #333;
-            color: #fff;
+            background: #1a1a1a;
+            color: #ddd;
             text-align: center;
-            padding: 3rem 0;
+            padding: 4rem 0;
         }
-        footer a {
-            color: #ff69b4;
-            margin: 0 10px;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to   { opacity: 1; transform: translateY(0); }
+        footer p { margin: 0.8rem 0; }
+        footer .quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #c41e3a;
+            margin: 2rem 0;
         }
 
-        /* Mobile Menu */
-        .menu-toggle { display: none; cursor: pointer; font-size: 1.8rem; }
+        /* Mobile */
+        .menu-toggle { display: none; cursor: pointer; color: white; font-size: 1.8rem; }
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
-            nav ul {
+            .nav-links {
                 position: fixed;
                 top: 70px;
                 left: -100%;
                 width: 100%;
                 height: 100vh;
-                background: rgba(255, 105, 180, 0.98);
+                background: rgba(0,0,0,0.95);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 transition: left 0.4s;
             }
-            nav ul.active { left: 0; }
+            .nav-links.active { left: 0; }
             .hero-content h1 { font-size: 3rem; }
+            .hero-content p { font-size: 1.2rem; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">Paws of Love</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#tips">Care Tips</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">☰</div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Civility & Justice</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#mission">Mission</a>
+                <a href="#values">Our Values</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+            <div class="menu-toggle">Menu</div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home">
+        <div class="hero-content">
+            <h1>Civility and Justice<br>Are Our Choice</h1>
+            <p>In a world that needs healing, we choose respect, fairness, and humanity.</p>
+            <a href="#mission" class="btn">Join the Movement</a>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Love & Protect Cats</h1>
-            <p>Every little cat deserves a warm home and endless love.</p>
-            <a href="#tips" class="btn">How to Help</a>
+    <!-- Mission -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>We believe that a better society begins with conscious choices: to speak with respect, to act with integrity, and to stand firmly for justice and equality. Every act of kindness and every voice raised against injustice builds a stronger, more civilized world.</p>
         </div>
     </section>
 
-    <!-- About -->
-    <section class="about" id="about">
+    <!-- Values -->
+    <section class="values" id="values">
         <div class="container">
-            <h2>Why Cats Need Our Love</h2>
-            <p>Cats are independent yet deeply affectionate creatures. Millions of stray and abandoned cats are waiting for kindness every day. By adopting, spaying/neutering, and providing proper care, we can give them the happy lives they deserve.</p>
-        </div>
-    </section>
-
-    <!-- Care Tips -->
-    <section class="tips" id="tips">
-        <div class="container">
-            <h2>How to Take Care of Cats</h2>
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Adopt, Don't Shop</h3>
-                    <p>Give a shelter cat a second chance at life.</p>
-                </div>
-                <div class="tip-card">
-                    <i class="fas fa-stethoscope"></i>
-                    <h3>Spay & Neuter</h3>
-                    <p>Help control the stray cat population.</p>
-                </div>
-                <div class="tip-card">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Proper Nutrition</h3>
-                    <p>Feed high-quality food and always provide fresh water.</p>
-                </div>
-                <div class="tip-card">
-                    <i class="fas fa-home"></i>
-                    <h3>Safe Environment</h3>
-                    <p>Keep toxic plants and small objects away.</p>
-                </div>
-                <div class="tip-card">
+            <h2>Core Values We Stand For</h2>
+            <div class="grid">
+                <div class="card">
                     <i class="fas fa-hands-helping"></i>
-                    <h3>Regular Vet Visits</h3>
-                    <p>Vaccinations and check-ups keep them healthy.</p>
+                    <h3>Respect</h3>
+                    <p>Treating every individual with dignity, regardless of differences.</p>
                 </div>
-                <div class="tip-card">
-                    <i class="fas fa-smile"></i>
-                    <h3>Lots of Love</h3>
-                    <p>Play, cuddle, and talk to them every day.</p>
+                <div class="card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Justice</h3>
+                    <p>Fighting for fairness and equality in all aspects of life.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Civility</h3>
+                    <p>Choosing words and actions that build bridges, not walls.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Empathy</h3>
+                    <p>Understanding others' experiences and standing in solidarity.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integrity</h3>
+                    <p>Doing the right thing, even when no one is watching.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community</h3>
+                    <p>Building a society where everyone belongs and thrives.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery -->
-    <section class="gallery" id="gallery">
+    <section class="images" id="gallery">
         <div class="container">
-            <h2>Adorable Moments</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800" alt="Cute cat"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1573865527935-4bad1dcbf9e5?w=800" alt="Kitten"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?w=800" alt="Sleeping cat"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=800" alt="Playful cat"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800" alt="Cat with toy"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1529778873920-4da4926a794c?w=800" alt="Beautiful cat"></div>
+            <h2>Moments of Hope & Unity</h2>
+            <div class="image-grid">
+                <div class="img-item"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="People uniting"></div>
+                <div class="img-item"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800" alt="Peaceful protest"></div>
+                <div class="img-item"><img src="https://images.unsplash.com/photo-1582213782179-483e8a4e7d9b?w=800" alt="Community support"></div>
+                <div class="img-item"><img src="https://images.unsplash.com/photo-1593113598332-cd25cc6b7bde?w=800" alt="Diverse hands together"></div>
+                <div class="img-item"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800" alt="Rally for justice"></div>
+                <div class="img-item"><img src="https://images.unsplash.com/photo-1532629345422-49123e4e6f09?w=800" alt="Hope and solidarity"></div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Made with <i class="fas fa-heart" style="color:#ff69b4;"></i> for all the cats in the world.</p>
-        <p>© 2025 Paws of Love – Protect Every Little Paw</p>
+        <p class="quote">“The time is always right to do what is right.”<br>— Martin Luther King Jr.</p>
+        <p>&copy; 2025 Civility & Justice Movement</p>
+        <p>Together, we choose a better world.</p>
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // Mobile menu
         document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
 </body>
